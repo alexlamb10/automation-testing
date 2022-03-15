@@ -2,7 +2,7 @@
 
 const {Builder, Capabilities, By} = require('selenium-webdriver')
 
-const {addMovie, crossMovie, uncrossMovie} = require('../functions/functions')
+const {addMovie, crossMovie, uncrossMovie, deleteMovie} = require('../functions/functions')
 
 require('chromedriver')
 
@@ -34,6 +34,12 @@ test('Cross off movie that was added', async () => {
 
 test('Uncross the movie', async () => {
     await uncrossMovie(driver)
+
+    await driver.sleep(3000)
+})
+
+test('Delete movie that was added', async() => {
+    await deleteMovie(driver)
 
     await driver.sleep(3000)
 })
