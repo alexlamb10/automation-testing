@@ -13,5 +13,11 @@ module.exports = {
 
   crossMovie: async (driver) => {
       await driver.findElement(By.xpath('//span[text()="The Batman"]')).click()
-  }
+  },
+
+  uncrossMovie: async (driver) => {
+      await driver.findElement(By.xpath('//span[text()="The Batman"]')).click()
+  },
+
+  
 }
